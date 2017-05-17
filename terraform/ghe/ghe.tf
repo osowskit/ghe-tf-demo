@@ -27,23 +27,23 @@ provider "github" {
 ################################################################################
 ## Set up the teams
 ################################################################################
-# resource "github_team" "Engineering" {
-#   name = "Engineering"
-#   description = "ValentineCorp Engineering team"
-#   privacy = "closed"
-# }
+resource "github_team" "Engineering" {
+  name = "Engineering"
+  description = "ValentineCorp Engineering team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Support" {
-#   name = "Support"
-#   description = "ValentineCorp Support team"
-#   privacy = "closed"
-# }
+resource "github_team" "Support" {
+  name = "Support"
+  description = "ValentineCorp Support team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Operations" {
-#   name = "Operations"
-#   description = "ValentineCorp Operations team"
-#   privacy = "closed"
-# }
+resource "github_team" "Operations" {
+  name = "Operations"
+  description = "ValentineCorp Operations team"
+  privacy = "closed"
+}
 
 
 ################################################################################
@@ -65,23 +65,25 @@ provider "github" {
 # }
 
 
+
+
 ################################################################################
 ## Set up the repo memberships
 ################################################################################
-# resource "github_team_membership" "nrvale0-eng" {
-#   team_id  = "${github_team.Engineering.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-eng" {
+  team_id  = "${github_team.Engineering.id}"
+  username = "nrvale0"
+  role     = "member"
+}
 
-# resource "github_team_membership" "nrvale0-support" {
-#   team_id  = "${github_team.Support.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-support" {
+  team_id  = "${github_team.Support.id}"
+  username = "nrvale0"
+  role     = "member"
+}
 
-# resource "github_team_membership" "nrvale0-operations" {
-#   team_id  = "${github_team.Operations.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-operations" {
+  team_id  = "${github_team.Operations.id}"
+  username = "nrvale0"
+  role     = "member"
+}
