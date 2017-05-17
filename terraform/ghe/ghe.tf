@@ -65,23 +65,25 @@ provider "github" {
 # }
 
 
+
+
 ################################################################################
 ## Set up the repo memberships
 ################################################################################
-# resource "github_team_membership" "nrvale0-eng" {
-#   team_id  = "${github_team.Engineering.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-eng" {
+  team_id  = "${github_team.Engineering.id}"
+  username = "nrvale0"
+  role     = "member"
+}
 
-# resource "github_team_membership" "nrvale0-support" {
-#   team_id  = "${github_team.Support.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-support" {
+  team_id  = "${github_team.Support.id}"
+  username = "nrvale0"
+  role     = "member"
+}
 
-# resource "github_team_membership" "nrvale0-operations" {
-#   team_id  = "${github_team.Operations.id}"
-#   username = "nrvale0"
-#   role     = "member"
-# }
+resource "github_team_membership" "nrvale0-operations" {
+  team_id  = "${github_team.Operations.id}"
+  username = "nrvale0"
+  role     = "member"
+}
