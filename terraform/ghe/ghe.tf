@@ -1,3 +1,8 @@
+variable "aws_default_region" {
+  type = "string"
+  default = "us-west-2"
+}
+
 terraform {
   backend "s3" {
     bucket = "ghe-tf-demo"
@@ -7,6 +12,8 @@ terraform {
 }
 
 provider "aws" {
+  # aws_access_key_id = "${var.AWS_ACCESS_KEY_ID}"
+  # aws_secret_access_key = "${var.AWS_SECRET_ACCESS_KEY}"
   region     = "${var.aws_default_region}"
 }
 
@@ -20,11 +27,11 @@ provider "github" {
 ################################################################################
 ## Set up the teams
 ################################################################################
-# resource "github_team" "Engineering" {
-#   name = "Engineering"
-#   description = "ValentineCorp Engineering team"
-#   privacy = "closed"
-# }
+resource "github_team" "Engineering" {
+  name = "Engineering"
+  description = "ValentineCorp Engineering team"
+  privacy = "closed"
+}
 
 # resource "github_team" "Support" {
 #   name = "Support"
