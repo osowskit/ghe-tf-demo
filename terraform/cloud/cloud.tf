@@ -12,8 +12,6 @@ terraform {
 }
 
 provider "aws" {
-  aws_access_key_id = "${var.AWS_ACCESS_KEY_ID}"
-  aws_secret_access_key = "${var.AWS_SECRET_ACCESS_KEY}"
   region     = "${var.aws_default_region}"
 }
 
