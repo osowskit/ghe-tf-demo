@@ -49,20 +49,20 @@ resource "github_team" "Operations" {
 ################################################################################
 ## Set up the team repos
 ################################################################################
-# resource "github_repository" "12-factor-app" {
-#   name = "12-factor-app"
-#   description = "Our core app"
-# }
+resource "github_repository" "12-factor-app" {
+  name = "12-factor-app"
+  description = "Our core app"
+}
   
-# resource "github_repository" "support-tickets" {
-#   name = "support-tickets"
-#   description = "Support tickets for our core app"
-# }
+resource "github_repository" "support-tickets" {
+  name = "support-tickets"
+  description = "Support tickets for our core app"
+}
 
-# resource "github_repository" "provisioning-portal" {
-#   name = "provisioning-portal"
-#   description = "Deployment pipeline for the infrastructure portal"
-# }
+resource "github_repository" "provisioning-portal" {
+  name = "provisioning-portal"
+  description = "Deployment pipeline for the infrastructure portal"
+}
 
 
 
