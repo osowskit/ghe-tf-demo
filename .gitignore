@@ -1,0 +1,8 @@
+*~
+\#*
+.\#*
+*.tfvars
+*.log
+*.tfstate
+.terraform
+*.backup
