@@ -27,23 +27,23 @@ provider "github" {
 ################################################################################
 ## Set up the teams
 ################################################################################
-# resource "github_team" "Engineering" {
-#   name = "Engineering"
-#   description = "ValentineCorp Engineering team"
-#   privacy = "closed"
-# }
+resource "github_team" "Engineering" {
+  name = "Engineering"
+  description = "ValentineCorp Engineering team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Support" {
-#   name = "Support"
-#   description = "ValentineCorp Support team"
-#   privacy = "closed"
-# }
+resource "github_team" "Support" {
+  name = "Support"
+  description = "ValentineCorp Support team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Operations" {
-#   name = "Operations"
-#   description = "ValentineCorp Operations team"
-#   privacy = "closed"
-# }
+resource "github_team" "Operations" {
+  name = "Operations"
+  description = "ValentineCorp Operations team"
+  privacy = "closed"
+}
 
 
 ################################################################################
