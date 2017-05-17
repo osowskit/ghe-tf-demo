@@ -27,42 +27,42 @@ provider "github" {
 ################################################################################
 ## Set up the teams
 ################################################################################
-# resource "github_team" "Engineering" {
-#   name = "Engineering"
-#   description = "ValentineCorp Engineering team"
-#   privacy = "closed"
-# }
+resource "github_team" "Engineering" {
+  name = "Engineering"
+  description = "ValentineCorp Engineering team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Support" {
-#   name = "Support"
-#   description = "ValentineCorp Support team"
-#   privacy = "closed"
-# }
+resource "github_team" "Support" {
+  name = "Support"
+  description = "ValentineCorp Support team"
+  privacy = "closed"
+}
 
-# resource "github_team" "Operations" {
-#   name = "Operations"
-#   description = "ValentineCorp Operations team"
-#   privacy = "closed"
-# }
+resource "github_team" "Operations" {
+  name = "Operations"
+  description = "ValentineCorp Operations team"
+  privacy = "closed"
+}
 
 
 ################################################################################
 ## Set up the team repos
 ################################################################################
-# resource "github_repository" "12-factor-app" {
-#   name = "12-factor-app"
-#   description = "Our core app"
-# }
+resource "github_repository" "12-factor-app" {
+  name = "12-factor-app"
+  description = "Our core app"
+}
   
-# resource "github_repository" "support-tickets" {
-#   name = "support-tickets"
-#   description = "Support tickets for our core app"
-# }
+resource "github_repository" "support-tickets" {
+  name = "support-tickets"
+  description = "Support tickets for our core app"
+}
 
-# resource "github_repository" "provisioning-portal" {
-#   name = "provisioning-portal"
-#   description = "Deployment pipeline for the infrastructure portal"
-# }
+resource "github_repository" "provisioning-portal" {
+  name = "provisioning-portal"
+  description = "Deployment pipeline for the infrastructure portal"
+}
 
 
 ################################################################################
